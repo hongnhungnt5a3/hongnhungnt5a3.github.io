@@ -66,6 +66,45 @@ h1, h2, h3 {
     max-width: 520px;
 }
 
+/* SOFTWARE STYLE */
+.software-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 50px;
+}
+
+.software-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    border: 3px solid #b6b9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #6b6eea;
+    font-size: 18px;
+    background: #f8f8ff;
+}
+
+.info b {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.stars {
+    color: #b6b9ff;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
 /* EDUCATION + EXPERIENCE */
 .timeline {
     display: grid;
@@ -135,7 +174,7 @@ footer {
 
         <div class="intro">
             <h1>Tran Thi Hong Nhung</h1>
-            <h3>Graphic Design Student</h3>
+            <h3>Graphic Designer</h3>
 
             <p>
                 I am a graphic design student with a strong passion for illustration,
@@ -175,21 +214,78 @@ footer {
     </div>
 
     <!-- SOFTWARE -->
-    <div class="section">
+<div class="section">
 
-        <div class="tag-title">Software & Skills</div>
+    <div class="tag-title">Software</div>
 
-        <div class="skills">
-            <div class="skill-box">Adobe Illustrator</div>
-            <div class="skill-box">Adobe InDesign</div>
-            <div class="skill-box">Adobe Photoshop</div>
-            <div class="skill-box">Clip Studio Paint</div>
-            <div class="skill-box">Blender</div>
-            <div class="skill-box">Maya</div>
-            <div class="skill-box">Figma</div>
+    <div class="software-grid">
+
+        <!-- Adobe Illustrator -->
+        <div class="software-item">
+            <div class="icon">Ai</div>
+            <div class="info">
+                <b>Adobe Illustrator</b>
+                <div class="stars">★★★★☆</div>
+            </div>
+        </div>
+
+        <!-- Clip Studio Paint -->
+        <div class="software-item">
+            <div class="icon">CSP</div>
+            <div class="info">
+                <b>Clip Studio Paint</b>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+
+        <!-- Adobe InDesign -->
+        <div class="software-item">
+            <div class="icon">Id</div>
+            <div class="info">
+                <b>Adobe InDesign</b>
+                <div class="stars">★★★★☆</div>
+            </div>
+        </div>
+
+        <!-- Blender -->
+        <div class="software-item">
+            <div class="icon">3D</div>
+            <div class="info">
+                <b>Blender</b>
+                <div class="stars">★★★☆☆</div>
+            </div>
+        </div>
+
+        <!-- Maya -->
+        <div class="software-item">
+            <div class="icon">M</div>
+            <div class="info">
+                <b>Maya</b>
+                <div class="stars">★★★☆☆</div>
+            </div>
+        </div>
+
+        <!-- Figma -->
+        <div class="software-item">
+            <div class="icon">F</div>
+            <div class="info">
+                <b>Figma</b>
+                <div class="stars">★★☆☆☆</div>
+            </div>
+        </div>
+
+        <!-- Photoshop -->
+        <div class="software-item">
+            <div class="icon">Ps</div>
+            <div class="info">
+                <b>Adobe Photoshop</b>
+                <div class="stars">★★★☆☆</div>
+            </div>
         </div>
 
     </div>
+
+</div>
 
     <!-- PROJECTS -->
     <div class="section">
