@@ -66,47 +66,81 @@ h1, h2, h3 {
     max-width: 520px;
 }
 
-/* SOFTWARE STYLE */
+/* SOFTWARE STYLE (FINAL – LIKE DESIGN) */
 .software-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 35px 50px;
+    gap: 30px 45px;
+    margin-top: 20px;
 }
 
 .software-item {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
 }
 
+/* Icon box */
 .icon {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     border-radius: 16px;
     border: 3px solid #b6b9ff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    color: #6b6eea;
-    font-size: 18px;
     background: #f8f8ff;
+    flex-shrink: 0;
 }
+
+/* Text logo (Ai, Ps, Id) */
+.icon.ai {
+    background: #ff9a00;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.icon.ps {
+    background: #31a8ff;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.icon.id {
+    background: #ff3366;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Image logo */
 .icon img {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
+}
+
+/* Name + stars */
+.info {
+    flex: 1;
 }
 
 .info b {
     display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
     margin-bottom: 6px;
-    font-size: 16px;
 }
 
 .stars {
     color: #b6b9ff;
-    font-size: 18px;
+    font-size: 17px;
     letter-spacing: 2px;
 }
 
@@ -149,20 +183,48 @@ h1, h2, h3 {
     font-family: Arial, sans-serif;
 }
 
-/* SOFTWARE */
-.skills {
+/* SOFTWARE LAYOUT LIKE DESIGN */
+.software-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 40px;
+    margin-top: 20px;
 }
 
-.skill-box {
-    background: #fafaff;
-    padding: 22px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    font-size: 16px;
+.software-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.soft-name {
+    flex: 1;
+    font-weight: 500;
+    color: #333;
+}
+
+.stars {
+    color: #b7b3f2;
+    font-size: 18px;
+}
+
+/* Icon box */
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    border: 2px solid #b7b3f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+/* Image inside icon */
+.icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 /* PROJECTS */
@@ -244,55 +306,59 @@ footer {
     </div>
 
     <!-- SOFTWARE -->
-<div class="skills-grid">
+<div class="software-section">
 
-    <!-- Adobe Illustrator -->
-    <div class="skill-item">
-        <div class="icon ai">Ai</div>
-        <div class="name">Adobe Illustrator</div>
-        <div class="stars">★★★☆☆</div>
-    </div>
+    <div class="software-grid">
 
-    <!-- Adobe InDesign -->
-    <div class="skill-item">
-        <div class="icon id">Id</div>
-        <div class="name">Adobe InDesign</div>
-        <div class="stars">★★★☆☆</div>
-    </div>
+        <!-- Adobe Illustrator -->
+        <div class="software-item">
+            <div class="icon ai">Ai</div>
+            <div class="soft-name">Adobe Illustrator</div>
+            <div class="stars">★★★☆☆</div>
+        </div>
 
-    <!-- Adobe Photoshop -->
-    <div class="skill-item">
-        <div class="icon ps">Ps</div>
-        <div class="name">Adobe Photoshop</div>
-        <div class="stars">★★★☆☆</div>
-    </div>
+        <!-- Clip Studio Paint -->
+        <div class="software-item">
+            <div class="icon"><img src="Clipstudio.png"></div>
+            <div class="soft-name">Clip Studio Paint</div>
+            <div class="stars">★★★★☆</div>
+        </div>
 
-    <!-- Clip Studio Paint -->
-    <div class="skill-item">
-        <div class="icon"><img src="Clipstudio.png"></div>
-        <div class="name">Clip Studio Paint</div>
-        <div class="stars">★★★★☆</div>
-    </div>
+        <!-- Adobe InDesign -->
+        <div class="software-item">
+            <div class="icon id">Id</div>
+            <div class="soft-name">Adobe InDesign</div>
+            <div class="stars">★★★☆☆</div>
+        </div>
 
-    <!-- Blender -->
-    <div class="skill-item">
-        <div class="icon"><img src="Blender.png"></div>
-        <div class="name">Blender</div>
-        <div class="stars">★★★☆☆</div>
-    </div>
+        <!-- Blender -->
+        <div class="software-item">
+            <div class="icon"><img src="Blender.png"></div>
+            <div class="soft-name">Blender</div>
+            <div class="stars">★★★☆☆</div>
+        </div>
 
-    <!-- Maya -->
-    <div class="skill-item">
-        <div class="icon"><img src="Maya.png"></div>
-        <div class="name">Maya</div>
-        <div class="stars">★★☆☆☆</div>
-    </div>
+        <!-- Maya -->
+        <div class="software-item">
+            <div class="icon"><img src="Maya.png"></div>
+            <div class="soft-name">Maya</div>
+            <div class="stars">★★☆☆☆</div>
+        </div>
 
-    <!-- Figma -->
-    <div class="skill-item">
-        <div class="icon"><img src="Figma.png"></div>
-        <div class="name">Figma</div>
-        <div class="stars">★☆☆☆☆</div>
+        <!-- Figma -->
+        <div class="software-item">
+            <div class="icon"><img src="Figma.png"></div>
+            <div class="soft-name">Figma</div>
+            <div class="stars">★☆☆☆☆</div>
+        </div>
+
+        <!-- Adobe Photoshop -->
+        <div class="software-item">
+            <div class="icon ps">Ps</div>
+            <div class="soft-name">Adobe Photoshop</div>
+            <div class="stars">★★★☆☆</div>
+        </div>
+
     </div>
 
 </div>
