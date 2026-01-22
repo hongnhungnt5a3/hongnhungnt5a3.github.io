@@ -18,8 +18,38 @@ body {
     padding: 60px 30px;
 }
 
+/* ===== HOME BUTTONS ===== */
+.home-select {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 120px;
+}
+
+.home-card {
+    width: 260px;
+    height: 180px;
+    border-radius: 30px;
+    border: 4px solid #b6b9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #6b6eea;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #fafaff;
+}
+
+.home-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== COMMON ===== */
 .section {
-    margin-bottom: 90px;
+    margin-bottom: 60px;
 }
 
 h1, h2, h3 {
@@ -33,9 +63,10 @@ h1, h2, h3 {
     border: 3px solid #b6b9ff;
     font-size: 26px;
     margin-bottom: 35px;
+    margin-top: 40px;
 }
 
-/* PROFILE */
+/* ===== PROFILE ===== */
 .profile {
     display: flex;
     gap: 50px;
@@ -66,15 +97,36 @@ h1, h2, h3 {
     max-width: 520px;
 }
 
-/* SOFTWARE STYLE – FINAL CLEAN */
+/* ===== TIMELINE ===== */
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: -25px;
+}
 
-/* Grid layout */
+.card {
+    background: #fafaff;
+    padding: 24px 28px 30px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.year {
+    color: #6f73ff;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+/* ===== SOFTWARE ===== */
 .software-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px 45px;
     margin-top: 20px;
-    margin-bottom: 60px;   /* 🌸 CÁCH 1 – tạo khoảng cách với Projects */
+    margin-bottom: 60px;
 }
 
 .software-item {
@@ -83,30 +135,23 @@ h1, h2, h3 {
     gap: 14px;
 }
 
-.software-title {
-    margin-top: 45px;   /* bạn có thể chỉnh 30–60px cho vừa mắt */
-}
-
-/* Cố định chiều rộng phần tên để sao thẳng hàng */
 .soft-name {
-    width: 180px;          /* cố định cột tên */
+    width: 180px;
     font-size: 15px;
     font-weight: 600;
     color: #333;
     text-align: center;
-    justify-content: center;
     display: flex;
-    align-items: center;  /* căn giữa theo chiều dọc với logo */
+    align-items: center;
+    justify-content: center;
 }
 
-/* Sao giữ nguyên bên phải */
 .stars {
     color: #b7b3f2;
     font-size: 18px;
     letter-spacing: 2px;
 }
 
-/* Icon box chung */
 .icon {
     width: 56px;
     height: 56px;
@@ -116,85 +161,19 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     background: #f8f8ff;
-    flex-shrink: 0;
 }
 
-/* Text logo Adobe */
-.icon.ai {
-    background: #ff9a00;
-    color: white;
-    font-weight: 700;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-}
+.icon.ai { background: #ff9a00; color: white; font-weight: 700; font-size: 20px; }
+.icon.ps { background: #31a8ff; color: white; font-weight: 700; font-size: 20px; }
+.icon.id { background: #ff3366; color: white; font-weight: 700; font-size: 20px; }
 
-.icon.ps {
-    background: #31a8ff;
-    color: white;
-    font-weight: 700;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.icon.id {
-    background: #ff3366;
-    color: white;
-    font-weight: 700;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-}
-
-/* Image logo */
 .icon img {
     width: 32px;
     height: 32px;
     object-fit: contain;
 }
 
-/* Name + stars */
-.info {
-    flex: 1;
-}
-
-.info b {
-    display: block;
-    font-size: 15px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 6px;
-}
-
-.stars {
-    color: #b6b9ff;
-    font-size: 17px;
-    letter-spacing: 2px;
-}
-
-/* Title (Education, Experience) */
-.timeline {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-top: -20px;   /* kéo cả Education + Experience + nền mờ lên */
-}
-
-/* Mỗi khối card */
-.card {
-    background: #fafaff;
-    padding: 26px 28px 28px;  /* giảm padding-top một chút */
-    border-radius: 22px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-.year {
-    color: #6f73ff;        /* tím giống design */
-    font-size: 18px;      /* to hơn chữ thường */
-    font-weight: 700;     /* đậm rõ */
-    margin-top: 10px;
-    margin-bottom: 6px;
-}
-
-/* PROJECTS */
+/* ===== PROJECTS ===== */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -213,6 +192,11 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
+/* ===== HIDE SECTIONS ===== */
+#cv-section, #portfolio-section {
+    display: none;
+}
+
 footer {
     text-align: center;
     padding: 50px;
@@ -226,132 +210,90 @@ footer {
 
 <div class="container">
 
+<!-- HOME SELECT -->
+<div class="home-select">
+    <div class="home-card" onclick="openCV()">CV</div>
+    <div class="home-card" onclick="openPortfolio()">Portfolio</div>
+</div>
+
+<!-- ===== CV SECTION ===== -->
+<div id="cv-section">
+
     <!-- PROFILE -->
     <div class="section profile">
-
         <img src="avatar.jpg" class="avatar">
-
         <div class="intro">
             <h1>Tran Thi Hong Nhung</h1>
             <h3>Graphic Designer</h3>
-
-            <p>
-                I am a graphic design student with a strong passion for illustration,
-                2D game art and 3D modeling.  
-                I enjoy creating cute, clean and visually appealing designs and
-                continuously improving my artistic skills.
-            </p>
+            <p>I am a graphic design student with a strong passion for illustration, 2D game art and 3D modeling.</p>
         </div>
-
     </div>
 
     <!-- EDUCATION + EXPERIENCE -->
     <div class="timeline">
-
-    <!-- EDUCATION -->
-    <div class="card">
-        <div class="tag-title">Education</div>
-
-        <div class="year">2021 – 2025</div>
-        <div class="place">FPT University</div>
-        <div class="desc">Graduated with a good grade from FPT University.</div>
-    </div>
-
-    <!-- EXPERIENCE -->
-    <div class="card">
-        <div class="tag-title">Experience</div>
-
-        <div class="year">2024</div>
-        <div class="place">Vicenter Vietnam Company</div>
-        <div class="desc">3-month internship as a 2D Game Artist.</div>
-    </div>
-
-</div>
-
-    <!-- SOFTWARE -->
-<div class="tag-title">Software</div>
-<div class="software-grid">
-
-    <div class="software-item">
-        <div class="icon ai">Ai</div>
-        <div class="soft-name">Adobe Illustrator</div>
-        <div class="stars">★★★☆☆</div>
-    </div>
-
-    <div class="software-item">
-        <div class="icon"><img src="Clipstudio.png"></div>
-        <div class="soft-name">Clip Studio Paint</div>
-        <div class="stars">★★★★☆</div>
-    </div>
-
-    <div class="software-item">
-        <div class="icon id">Id</div>
-        <div class="soft-name">Adobe InDesign</div>
-        <div class="stars">★★★☆☆</div>
-    </div>
-
-    <div class="software-item">
-        <div class="icon"><img src="Blender.png"></div>
-        <div class="soft-name">Blender</div>
-        <div class="stars">★★★☆☆</div>
-    </div>
-
-    <div class="software-item">
-        <div class="icon"><img src="Maya.png"></div>
-        <div class="soft-name">Maya</div>
-        <div class="stars">★★☆☆☆</div>
-    </div>
-
-    <div class="software-item">
-        <div class="icon"><img src="Figma.png"></div>
-        <div class="soft-name">Figma</div>
-        <div class="stars">★☆☆☆☆</div>
-    </div>
-
-    <div class="software-item">
-        <div class="icon ps">Ps</div>
-        <div class="soft-name">Adobe Photoshop</div>
-        <div class="stars">★★☆☆☆</div>
-    </div>
-
-</div>
-
-    <!-- PROJECTS -->
-    <div class="section">
-
-        <div class="tag-title">Projects</div>
-
-        <!-- 3D PROJECT -->
-        <h2 style="margin-bottom:30px;">3D Projects</h2>
-
-        <div class="projects">
-    <img src="OC1.png" class="project-img">
-    <img src="OC2.png" class="project-img">
-    <img src="OC3.png" class="project-img">
-    <img src="PPPPMiku.png" class="project-img">
-    <img src="PPPPTeio.png" class="project-img">
-    <img src="RamenMiku.png" class="project-img">
-    <img src="SnowMiku.png" class="project-img">
-    <img src="MusicMiku.png" class="project-img">
-</div>
-
-        <!-- 2D PROJECT -->
-        <h2 style="margin-top:80px; margin-bottom:30px;">2D Projects</h2>
-
-        <div class="projects">
-            <img src="2d1.jpg" class="project-img">
-            <img src="2d2.jpg" class="project-img">
-            <img src="2d3.jpg" class="project-img">
-            <img src="2d4.jpg" class="project-img">
+        <div class="card">
+            <div class="tag-title">Education</div>
+            <div class="year">2021 – 2025</div>
+            <div>FPT University</div>
+            <div>Graduated with a good grade from FPT University.</div>
         </div>
 
+        <div class="card">
+            <div class="tag-title">Experience</div>
+            <div class="year">2024</div>
+            <div>Vicenter Vietnam Company</div>
+            <div>3-month internship as a 2D Game Artist.</div>
+        </div>
     </div>
+
+    <!-- SOFTWARE -->
+    <div class="tag-title">Software</div>
+    <div class="software-grid">
+        <div class="software-item"><div class="icon ai">Ai</div><div class="soft-name">Adobe Illustrator</div><div class="stars">★★★☆☆</div></div>
+        <div class="software-item"><div class="icon"><img src="Clipstudio.png"></div><div class="soft-name">Clip Studio Paint</div><div class="stars">★★★★☆</div></div>
+        <div class="software-item"><div class="icon id">Id</div><div class="soft-name">Adobe InDesign</div><div class="stars">★★★☆☆</div></div>
+        <div class="software-item"><div class="icon"><img src="Blender.png"></div><div class="soft-name">Blender</div><div class="stars">★★★☆☆</div></div>
+        <div class="software-item"><div class="icon"><img src="Maya.png"></div><div class="soft-name">Maya</div><div class="stars">★★☆☆☆</div></div>
+        <div class="software-item"><div class="icon"><img src="Figma.png"></div><div class="soft-name">Figma</div><div class="stars">★☆☆☆☆</div></div>
+        <div class="software-item"><div class="icon ps">Ps</div><div class="soft-name">Adobe Photoshop</div><div class="stars">★★☆☆☆</div></div>
+    </div>
+</div>
+
+<!-- ===== PORTFOLIO SECTION ===== -->
+<div id="portfolio-section">
+
+    <div class="tag-title">3D Projects</div>
+    <div class="projects">
+        <img src="OC1.png" class="project-img">
+        <img src="OC2.png" class="project-img">
+        <img src="OC3.png" class="project-img">
+        <img src="PPPPMiku.png" class="project-img">
+    </div>
+
+    <div class="tag-title" style="margin-top:80px;">2D Projects</div>
+    <div class="projects">
+        <img src="2d1.jpg" class="project-img">
+        <img src="2d2.jpg" class="project-img">
+        <img src="2d3.jpg" class="project-img">
+        <img src="2d4.jpg" class="project-img">
+    </div>
+</div>
 
 </div>
 
-<footer>
-© 2026 Tran Thi Hong Nhung — Portfolio
-</footer>
+<footer>© 2026 Tran Thi Hong Nhung — Portfolio</footer>
+
+<script>
+function openCV() {
+    document.querySelector('.home-select').style.display = 'none';
+    document.getElementById('cv-section').style.display = 'block';
+}
+
+function openPortfolio() {
+    document.querySelector('.home-select').style.display = 'none';
+    document.getElementById('portfolio-section').style.display = 'block';
+}
+</script>
 
 </body>
 </html>
