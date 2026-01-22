@@ -167,25 +167,19 @@ h1, h2, h3 {
 }
 
 /* Title (Education, Experience) */
-.tag-title {
-    margin-bottom: 12px;   /* kéo nội dung lại gần tiêu đề */
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 2 cột ngang nhau */
+    gap: 50px;                        /* khoảng cách giữa 2 mục */
+    margin-top: 30px;
 }
 
-/* Year (2021 - 2025, 2024) */
-.year {
-    margin-top: 8px;
-    margin-bottom: 6px;
-}
-
-/* School / Company name */
-.place {
-    margin-bottom: 6px;
-}
-
-/* Description text */
-.desc {
-    margin-bottom: 28px;   /* tạo khoảng cách đẹp với mục bên dưới */
-    line-height: 1.5;
+/* Mỗi khối card */
+.card {
+    background: #fafaff;
+    padding: 28px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
 /* PROJECTS */
@@ -240,31 +234,27 @@ footer {
     </div>
 
     <!-- EDUCATION + EXPERIENCE -->
-    <div class="section timeline">
+    <div class="timeline">
 
-        <!-- EDUCATION -->
-        <div>
-            <div class="tag-title">Education</div>
+    <!-- EDUCATION -->
+    <div class="card">
+        <div class="tag-title">Education</div>
 
-            <div class="card">
-                <h3>2021 – 2025</h3>
-                <p><b>FPT University</b></p>
-                <p>Graduated with a good grade from FPT University.</p>
-            </div>
-        </div>
-
-        <!-- EXPERIENCE -->
-        <div>
-            <div class="tag-title">Experience</div>
-
-            <div class="card">
-                <h3>2024</h3>
-                <p><b>Vicenter Vietnam Company</b></p>
-                <p>3-month internship as a 2D Game Artist.</p>
-            </div>
-        </div>
-
+        <div class="year">2021 – 2025</div>
+        <div class="place">FPT University</div>
+        <div class="desc">Graduated with a good grade from FPT University.</div>
     </div>
+
+    <!-- EXPERIENCE -->
+    <div class="card">
+        <div class="tag-title">Experience</div>
+
+        <div class="year">2024</div>
+        <div class="place">Vicenter Vietnam Company</div>
+        <div class="desc">3-month internship as a 2D Game Artist.</div>
+    </div>
+
+</div>
 
     <!-- SOFTWARE -->
 <div class="software-grid">
