@@ -1,95 +1,231 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Portfolio | Your Name</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #111;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
-    .skills span {
-      display: inline-block;
-      background: #eee;
-      padding: 8px 12px;
-      margin: 6px;
-      border-radius: 20px;
-    }
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    a {
-      color: #0077ff;
-      text-decoration: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Hong Nhung Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fdfdff;
+    color: #444;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 30px;
+}
+
+.section {
+    margin-bottom: 90px;
+}
+
+h1, h2, h3 {
+    color: #6b6eea;
+}
+
+.tag-title {
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 30px;
+    border: 3px solid #b6b9ff;
+    font-size: 26px;
+    margin-bottom: 35px;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #c7c9ff;
+}
+
+.intro h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.intro h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+/* EDUCATION + EXPERIENCE */
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.card {
+    background: #fafaff;
+    padding: 28px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* SOFTWARE */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 25px;
+}
+
+.skill-box {
+    background: #fafaff;
+    padding: 22px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    font-size: 16px;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 35px;
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+    font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Your Name</h1>
-  <p>Fresh Graduate | Designer</p>
-</header>
+<div class="container">
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    I am a fresh graduate with a strong interest in visual design.
-    I enjoy learning, creating, and improving my skills through real projects.
-  </p>
-</section>
+    <!-- PROFILE -->
+    <div class="section profile">
 
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Canva</span>
-    <span>Graphic Design</span>
-    <span>Social Media Design</span>
-    <span>Basic Branding</span>
-  </div>
-</section>
+        <img src="avatar.jpg" class="avatar">
 
-<section>
-  <h2>Portfolio</h2>
-  <p>
-    View my selected works on Behance:
-    <br>
-    👉 <a href="https://behance.net/yourname" target="_blank">
-      behance.net/yourname
-    </a>
-  </p>
-</section>
+        <div class="intro">
+            <h1>Tran Thi Hong Nhung</h1>
+            <h3>Graphic Design Student</h3>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: yourmail@gmail.com</p>
-  <p>Phone: 0xxx xxx xxx</p>
-</section>
+            <p>
+                I am a graphic design student with a strong passion for illustration,
+                2D game art and 3D modeling.  
+                I enjoy creating cute, clean and visually appealing designs and
+                continuously improving my artistic skills.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- EDUCATION + EXPERIENCE -->
+    <div class="section timeline">
+
+        <!-- EDUCATION -->
+        <div>
+            <div class="tag-title">Education</div>
+
+            <div class="card">
+                <h3>2021 – 2025</h3>
+                <p><b>FPT University</b></p>
+                <p>Graduated with a good grade from FPT University.</p>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div>
+            <div class="tag-title">Experience</div>
+
+            <div class="card">
+                <h3>2024</h3>
+                <p><b>Vicenter Vietnam Company</b></p>
+                <p>3-month internship as a 2D Game Artist.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SOFTWARE -->
+    <div class="section">
+
+        <div class="tag-title">Software & Skills</div>
+
+        <div class="skills">
+            <div class="skill-box">Adobe Illustrator</div>
+            <div class="skill-box">Adobe InDesign</div>
+            <div class="skill-box">Adobe Photoshop</div>
+            <div class="skill-box">Clip Studio Paint</div>
+            <div class="skill-box">Blender</div>
+            <div class="skill-box">Maya</div>
+            <div class="skill-box">Figma</div>
+        </div>
+
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+
+        <div class="tag-title">Projects</div>
+
+        <!-- 3D PROJECT -->
+        <h2 style="margin-bottom:30px;">3D Projects</h2>
+
+        <div class="projects">
+    <img src="OC1.png" class="project-img">
+    <img src="OC2.png" class="project-img">
+    <img src="OC3.png" class="project-img">
+    <img src="PPPPMiku.png" class="project-img">
+    <img src="PPPPTeto.png" class="project-img">
+    <img src="RamenMiku.png" class="project-img">
+    <img src="SnowMiku.png" class="project-img">
+    <img src="MusicMiku.png" class="project-img">
+</div>
+
+        <!-- 2D PROJECT -->
+        <h2 style="margin-top:80px; margin-bottom:30px;">2D Projects</h2>
+
+        <div class="projects">
+            <img src="2d1.jpg" class="project-img">
+            <img src="2d2.jpg" class="project-img">
+            <img src="2d3.jpg" class="project-img">
+            <img src="2d4.jpg" class="project-img">
+        </div>
+
+    </div>
+
+</div>
 
 <footer>
-  © 2026 Your Name
+© 2026 Tran Thi Hong Nhung — Portfolio
 </footer>
 
 </body>
