@@ -253,7 +253,8 @@ footer {
 .oc-grid {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;   /* 🌸 căn ảnh xuống thấp */
+
     gap: 36px;                  /* tăng khoảng cách giữa ảnh */
     overflow-x: auto;
     padding-bottom: 10px;
@@ -262,16 +263,13 @@ footer {
 /* ẢNH TO HƠN – GIỮ NGUYÊN TỈ LỆ */
 .oc-grid img {
     height: auto;
-    max-height: 200px;          /* 🌸 tăng size ảnh */
+    max-height: 200px;
     border-radius: 18px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.1);
     transition: 0.3s;
     cursor: pointer;
     flex-shrink: 0;
-}
-
-.oc-grid img:hover {
-    transform: scale(1.1);
+    margin-top: 20px;        /* 🌸 đẩy ảnh xuống thêm một chút */
 }
 
 </style>
