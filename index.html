@@ -273,6 +273,7 @@ footer {
 }
 
     /* PERSONAL ART */
+
 .personal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -284,19 +285,39 @@ footer {
     background: rgba(250, 250, 255, 0.85);
     backdrop-filter: blur(6px);
     border-radius: 26px;
-    padding: 28px;
+    padding: 30px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
 }
 
-.personal-inner {
+/* BOX TRÁI – ẢNH DỌC */
+.personal-inner.portrait {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
 }
 
-.personal-inner img {
+.personal-inner.portrait img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 4;   /* ảnh dọc */
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* BOX PHẢI – ẢNH NGANG */
+.personal-inner.landscape {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.personal-inner.landscape img {
+    width: 100%;
+    aspect-ratio: 4 / 3;   /* ảnh ngang */
     object-fit: cover;
     border-radius: 14px;
     box-shadow: 0 6px 14px rgba(0,0,0,0.08);
@@ -487,12 +508,12 @@ footer {
 
 <div class="personal-grid">
 
-    <!-- BOX 1 – NHÓM ẢNH BÊN TRÁI -->
+    <!-- BOX 1 – ẢNH DỌC -->
     <div class="personal-card">
-        <div class="personal-inner">
+        <div class="personal-inner portrait">
             <img src="Belryuuedit.png">
-            <img src="izutsumi.png">
             <img src="hotarumaru.png">
+            <img src="izutsumi.png">
             <img src="Mikazuchi.png">
             <img src="Tsurumaru.png">
             <img src="Lyscard.png">
@@ -501,9 +522,9 @@ footer {
         </div>
     </div>
 
-    <!-- BOX 2 – NHÓM ẢNH BÊN PHẢI -->
+    <!-- BOX 2 – ẢNH NGANG -->
     <div class="personal-card">
-        <div class="personal-inner">
+        <div class="personal-inner landscape">
             <img src="lake.png">
             <img src="Mushroom.png">
         </div>
