@@ -237,6 +237,38 @@ footer {
     transform: scale(1.08);
 }
 
+    /* OC DESIGN – 1 BOX NHỎ */
+
+.oc-box {
+    background: rgba(250, 250, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 26px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    max-width: 420px;          /* ô nhỏ gọn */
+    margin-top: 40px;
+}
+
+.oc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 ảnh / hàng */
+    gap: 18px;
+}
+
+.oc-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.oc-grid img:hover {
+    transform: scale(1.08);
+}
+
 </style>
 </head>
 
@@ -351,12 +383,14 @@ footer {
 
 <h2 style="margin-top:80px; margin-bottom:20px;">2D Projects</h2>
 
+<h2 style="margin-top:80px; margin-bottom:20px;">2D Projects</h2>
+
 <!-- Chibi -->
 <h3 style="margin-bottom:25px; color:#6b6eea;">Chibi</h3>
 
 <div class="chibi-grid">
 
-    <!-- BOX 1 – NHÓM ẢNH BÊN TRÁI -->
+    <!-- BOX 1 -->
     <div class="chibi-card">
         <div class="chibi-inner">
             <img src="kinich.png">
@@ -375,7 +409,7 @@ footer {
         </div>
     </div>
 
-    <!-- BOX 2 – NHÓM ẢNH BÊN PHẢI -->
+    <!-- BOX 2 -->
     <div class="chibi-card">
         <div class="chibi-inner">
             <img src="sample1.png">
@@ -394,6 +428,19 @@ footer {
 
 </div>
 
+<!-- OC DESIGN -->
+<h3 style="margin-top:60px; margin-bottom:25px; color:#6b6eea;">OC Design</h3>
+
+<div class="oc-box">
+    <div class="oc-grid">
+        <img src="Mewtrys.png">
+        <img src="Mirilius.png">
+        <img src="Belryuu1.png">
+        <img src="Fhadeus.png">
+        <img src="Fil.png">
+        <img src="Lys.png">
+    </div>
+</div>
 
 <footer>
 © 2026 Tran Thi Hong Nhung — Portfolio
