@@ -274,12 +274,15 @@ h1, h2, h3 {
 }
 
 .oc-grid img {
-    max-height: 220px;
+    max-height: 190px;          /* thu nhỏ ảnh lại */
+    max-width: 100%;
     border-radius: 18px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.1);
     transition: 0.3s;
-    margin-top: 35px;
+    margin: 25px 10px 0;        /* tạo khoảng cách với khung và ảnh bên cạnh */
+    object-fit: contain;       /* không bị cắt ảnh */
 }
+
 .oc-grid img:hover {
     transform: scale(1.08);
 }
