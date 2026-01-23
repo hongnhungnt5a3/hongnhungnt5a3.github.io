@@ -236,34 +236,36 @@ footer {
     transform: scale(1.08);
 }
 
-    /* OC DESIGN – BOX DÀI + ẢNH XẾP NGANG */
-
+    /* OC DESIGN – BOX DÀI + ẢNH GIỮ NGUYÊN SIZE + CĂN GIỮA */
 .oc-box {
     background: rgba(250, 250, 255, 0.85);
     backdrop-filter: blur(6px);
     border-radius: 26px;
-    padding: 24px 30px;
+    padding: 30px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    width: 100%;              /* kéo dài ngang full khung */
+    width: 100%;
     margin-top: 40px;
 }
 
+/* Hàng ngang + căn giữa */
 .oc-grid {
-    display: flex;           /* xếp ngang 1 hàng */
-    gap: 20px;
-    overflow-x: auto;        /* nếu nhiều ảnh sẽ kéo ngang */
+    display: flex;
+    justify-content: center;     /* căn giữa theo chiều ngang */
+    align-items: center;         /* căn giữa theo chiều dọc */
+    gap: 28px;
+    overflow-x: auto;
     padding-bottom: 10px;
 }
 
+/* ẢNH GIỮ NGUYÊN SIZE – KHÔNG ÉP KÍCH THƯỚC */
 .oc-grid img {
-    width: 120px;            /* GIỮ KÍCH CỠ ỔN ĐỊNH */
-    height: 120px;
-    object-fit: cover;
+    height: auto;               /* giữ nguyên tỉ lệ gốc */
+    max-height: 160px;          /* giới hạn cao nhẹ cho đồng đều */
     border-radius: 14px;
     box-shadow: 0 6px 14px rgba(0,0,0,0.08);
     transition: 0.3s;
     cursor: pointer;
-    flex-shrink: 0;          /* không bị ép nhỏ */
+    flex-shrink: 0;
 }
 
 .oc-grid img:hover {
