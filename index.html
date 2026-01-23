@@ -199,6 +199,42 @@ footer {
     color: #888;
     font-size: 14px;
 }
+
+/* CHIBI COLLECTION */
+
+.chibi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 2 ô vuông */
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.chibi-card {
+    background: rgba(250, 250, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 26px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.chibi-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 ảnh / hàng */
+    gap: 18px;
+}
+
+.chibi-inner img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.chibi-inner img:hover {
+    transform: scale(1.08);
+}
+
 </style>
 </head>
 
@@ -311,18 +347,51 @@ footer {
             <img src="MusicMiku.png" class="project-img">
         </div>
 
-        <h2 style="margin-top:80px; margin-bottom:30px;">2D Projects</h2>
+<h2 style="margin-top:80px; margin-bottom:20px;">2D Projects</h2>
 
-        <div class="projects">
-            <img src="2d1.jpg" class="project-img">
-            <img src="2d2.jpg" class="project-img">
-            <img src="2d3.jpg" class="project-img">
-            <img src="2d4.jpg" class="project-img">
+<!-- Chibi -->
+<h3 style="margin-bottom:25px; color:#6b6eea;">Chibi</h3>
+
+<div class="chibi-grid">
+
+    <!-- BOX 1 – NHÓM ẢNH BÊN TRÁI -->
+    <div class="chibi-card">
+        <div class="chibi-inner">
+            <img src="kinich.png">
+            <img src="mualani.png">
+            <img src="sucrose.png">
+            <img src="xiao.png">
+            <img src="yaoyao.png">
+            <img src="albedo.png">
+            <img src="arlecchino.png">
+            <img src="furina.png">
+            <img src="kachina.png">
+            <img src="kaeya.png">
+            <img src="lyney.png">
+            <img src="diluc.png">
+            <img src="lynette.png">
         </div>
+    </div>
 
+    <!-- BOX 2 – NHÓM ẢNH BÊN PHẢI -->
+    <div class="chibi-card">
+        <div class="chibi-inner">
+            <img src="sample1.png">
+            <img src="sample2.png">
+            <img src="sample3.png">
+            <img src="sample4.png">
+            <img src="sample6.png">
+            <img src="spoonchibi.png">
+            <img src="chibi nam.png">
+            <img src="elysia.png">
+            <img src="JaneDoe.png">
+            <img src="sample5.png">
+            <img src="otpchibi.png">
+        </div>
     </div>
 
 </div>
+
 
 <footer>
 © 2026 Tran Thi Hong Nhung — Portfolio
