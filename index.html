@@ -272,6 +272,42 @@ footer {
     margin-top: 20px;        /* 🌸 đẩy ảnh xuống thêm một chút */
 }
 
+    /* PERSONAL ART */
+.personal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.personal-card {
+    background: rgba(250, 250, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 26px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.personal-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.personal-inner img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.personal-inner img:hover {
+    transform: scale(1.08);
+}
+
 </style>
 </head>
 
@@ -426,6 +462,7 @@ footer {
             <img src="JaneDoe.png">
             <img src="sample5.png">
             <img src="otpchibi.png">
+            <img src="chibionsen.png">
         </div>
     </div>
 
@@ -443,6 +480,35 @@ footer {
         <img src="Fil.png">
         <img src="Lys.png">
     </div>
+</div>
+
+<!-- PERSONAL ART -->
+<h3 style="margin-top:80px; margin-bottom:25px; color:#6b6eea;">Personal Art</h3>
+
+<div class="personal-grid">
+
+    <!-- BOX 1 – NHÓM ẢNH BÊN TRÁI -->
+    <div class="personal-card">
+        <div class="personal-inner">
+            <img src="Belryuuedit.png">
+            <img src="izutsumi.png">
+            <img src="hotarumaru.png">
+            <img src="Mikazuchi.png">
+            <img src="Tsurumaru.png">
+            <img src="Lyscard.png">
+            <img src="Belryuucard.png">
+            <img src="Fhadeuscard.png">
+        </div>
+    </div>
+
+    <!-- BOX 2 – NHÓM ẢNH BÊN PHẢI -->
+    <div class="personal-card">
+        <div class="personal-inner">
+            <img src="lake.png">
+            <img src="Mushroom.png">
+        </div>
+    </div>
+
 </div>
 
 <footer>
