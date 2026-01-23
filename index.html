@@ -236,40 +236,42 @@ footer {
     transform: scale(1.08);
 }
 
-    /* OC DESIGN – BOX DÀI + ẢNH GIỮ NGUYÊN SIZE + CĂN GIỮA */
+    /* OC DESIGN – BOX TO + ẢNH TO + CĂN GIỮA ĐẸP */
+
 .oc-box {
-    background: rgba(250, 250, 255, 0.85);
+    background: rgba(250, 250, 255, 0.9);
     backdrop-filter: blur(6px);
-    border-radius: 26px;
-    padding: 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-radius: 30px;
+    padding: 40px 50px;          /* tăng padding để box to hơn */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     width: 100%;
     margin-top: 40px;
+    min-height: 260px;          /* 🌸 tăng chiều cao box */
 }
 
 /* Hàng ngang + căn giữa */
 .oc-grid {
     display: flex;
-    justify-content: center;     /* căn giữa theo chiều ngang */
-    align-items: center;         /* căn giữa theo chiều dọc */
-    gap: 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;                  /* tăng khoảng cách giữa ảnh */
     overflow-x: auto;
     padding-bottom: 10px;
 }
 
-/* ẢNH GIỮ NGUYÊN SIZE – KHÔNG ÉP KÍCH THƯỚC */
+/* ẢNH TO HƠN – GIỮ NGUYÊN TỈ LỆ */
 .oc-grid img {
-    height: auto;               /* giữ nguyên tỉ lệ gốc */
-    max-height: 160px;          /* giới hạn cao nhẹ cho đồng đều */
-    border-radius: 14px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    height: auto;
+    max-height: 200px;          /* 🌸 tăng size ảnh */
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
     transition: 0.3s;
     cursor: pointer;
     flex-shrink: 0;
 }
 
 .oc-grid img:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 </style>
