@@ -270,17 +270,17 @@ h1, h2, h3 {
 .oc-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 22px;   /* khoảng cách giữa các ảnh vừa phải */
 }
 
 .oc-grid img {
-    max-height: 190px;          /* thu nhỏ ảnh lại */
+    max-height: 190px;
     max-width: 100%;
     border-radius: 18px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.1);
     transition: 0.3s;
-    margin: 25px 10px 0;        /* tạo khoảng cách với khung và ảnh bên cạnh */
-    object-fit: contain;       /* không bị cắt ảnh */
+    margin-top: 22px;      /* chỉ cách khung trên một chút */
+    object-fit: contain;
 }
 
 .oc-grid img:hover {
