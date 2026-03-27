@@ -603,31 +603,33 @@ footer {
 <footer>
 © 2026 Tran Thi Hong Nhung — Portfolio
 </footer>
+/* ===== POPUP IMAGE ===== */
+.img-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 9999;
+}
 
-</div>
-   <div class="img-preview" id="previewBox">
-    <img id="previewImg">
-</div>
-   <script>
-const previewBox = document.getElementById("previewBox");
-const previewImg = document.getElementById("previewImg");
+.img-preview img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 16px;
+}
 
-/* chỉ áp dụng cho ảnh trong các ô */
-document.querySelectorAll(
-    ".chibi-inner img, .personal-inner img, .project-img, .oc-grid img"
-).forEach(img => {
-
-    img.addEventListener("click", () => {
-        previewBox.classList.add("active");
-        previewImg.src = img.src;
-    });
-
-});
-
-/* click ra ngoài để tắt */
-previewBox.addEventListener("click", () => {
-    previewBox.classList.remove("active");
-});
+.img-preview.active {
+    opacity: 1;
+    pointer-events: all;
+}
 </script>
 </body>
 </html>
