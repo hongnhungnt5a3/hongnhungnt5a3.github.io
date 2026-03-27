@@ -3,7 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Hong Nhung Portfolio</title>
+/* ===== CLICK ZOOM ẢNH ===== */
+.chibi-inner img,
+.personal-inner img,
+.project-img,
+.oc-grid img {
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+/* khi click */
+.zoomed {
+    transform: scale(2);
+    object-fit: contain;
+    z-index: 999;
+    position: relative;
+}
 <style>
 
 /* =====================================================
@@ -24,11 +39,20 @@
     --shadow-strong: 0 12px 30px rgba(0,0,0,0.1);
 }
 
-</style>
 /* =====================================================
    🌸 BACKGROUND + BODY
    ===================================================== */
+<script>
+document.querySelectorAll(
+    ".chibi-inner img, .personal-inner img, .project-img, .oc-grid img"
+).forEach(img => {
 
+    img.addEventListener("click", function () {
+        this.classList.toggle("zoomed");
+    });
+
+});
+</script>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
